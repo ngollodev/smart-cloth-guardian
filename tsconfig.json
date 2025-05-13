@@ -2,9 +2,11 @@
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
     "strict": true,
+    "jsx": "react",
+    "baseUrl": ".",
     "paths": {
       "@/*": [
-        "./*"
+        "app/*"
       ]
     }
   },
@@ -13,5 +15,5 @@
     "**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts"
-  ]
+, "app/components/ui/Card.js", "app/components/ui/Input.js", "app/hooks/useSystem.js", "app/navigation/MainTabNavigator.js", "app/components/ui/Button.js"  ]
 }
