@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { View, Text, SafeAreaView, ScrollView, TouchableOpacity } from 'react-native';
 import { styled } from 'nativewind';
@@ -38,7 +37,7 @@ const notifications = [
   }
 ];
 
-export default function NotificationsScreen() {
+function NotificationsScreen() {
   const getNotificationStyle = (type, read) => {
     let bgColor = read ? 'bg-white' : 'bg-blue-50';
     
@@ -100,3 +99,5 @@ export default function NotificationsScreen() {
     </StyledSafeAreaView>
   );
 }
+
+export default NotificationsScreen;

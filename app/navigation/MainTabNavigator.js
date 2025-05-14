@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { View } from 'react-native';
@@ -13,7 +12,7 @@ import TabIcons from '../components/TabIcons';
 const Tab = createBottomTabNavigator();
 const StyledView = styled(View);
 
-export default function MainTabNavigator() {
+function MainTabNavigator() {
   return (
     <Tab.Navigator 
       screenOptions={{
@@ -65,3 +64,5 @@ export default function MainTabNavigator() {
     </Tab.Navigator>
   );
 }
+
+export default MainTabNavigator;

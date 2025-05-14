@@ -1,6 +1,6 @@
 import React from 'react';
 import { TouchableOpacity, Text, ActivityIndicator } from 'react-native';
-import { styled } from '../../libs/styled';
+import { styled } from 'nativewind';
 
 const StyledTouchableOpacity = styled(TouchableOpacity);
 const StyledText = styled(Text);
@@ -62,3 +62,5 @@ export function Button({
     </StyledTouchableOpacity>
   );
 }
+
+export default Button;

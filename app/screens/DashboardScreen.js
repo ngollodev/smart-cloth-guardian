@@ -13,7 +13,7 @@ const StyledScrollView = styled(ScrollView);
 const StyledTouchableOpacity = styled(TouchableOpacity);
 const StyledImage = styled(Image);
 
-export default function DashboardScreen() {
+function DashboardScreen() {
   const { 
     systemStatus, 
     weatherData, 
@@ -176,3 +176,5 @@ export default function DashboardScreen() {
     </StyledSafeAreaView>
   );
 }
+
+export default DashboardScreen;

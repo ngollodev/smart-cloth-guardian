@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { View, Text, ScrollView, SafeAreaView } from 'react-native';
-import { styled } from '../libs/styled';
+import { styled } from 'nativewind';
 import { useSystem } from '../hooks/useSystem';
 
 const StyledView = styled(View);
@@ -9,7 +8,7 @@ const StyledText = styled(Text);
 const StyledScrollView = styled(ScrollView);
 const StyledSafeAreaView = styled(SafeAreaView);
 
-export default function LogsScreen() {
+function LogsScreen() {
   const { logs } = useSystem();
 
   const getEventTypeStyle = (eventType: string) => {
@@ -55,3 +54,5 @@ export default function LogsScreen() {
     </StyledSafeAreaView>
   );
 }
+
+export default LogsScreen;

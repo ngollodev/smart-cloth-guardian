@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { View, Text, ScrollView, TouchableOpacity, RefreshControl, Image } from 'react-native';
-import { styled } from '../libs/styled';
+import { styled } from 'nativewind';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useAuth } from '../hooks/useAuth';
 import { useSystem } from '../hooks/useSystem';
-import { Button } from '../components/ui/Button';
+import { Button } from '../components/ui/button';
 import { UserIcon } from '../components/icons/TabIcons';
 import ProfileModal from '../components/profile/ProfileModal';
 
@@ -15,7 +15,7 @@ const StyledTouchableOpacity = styled(TouchableOpacity);
 const StyledSafeAreaView = styled(SafeAreaView);
 const StyledImage = styled(Image);
 
-export default function DashboardScreen() {
+function DashboardScreen() {
   const [profileModalVisible, setProfileModalVisible] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
   
@@ -164,3 +164,5 @@ export default function DashboardScreen() {
     </StyledSafeAreaView>
   );
 }
+
+export default DashboardScreen;

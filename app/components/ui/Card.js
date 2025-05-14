@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { View, Text } from 'react-native';
 import { styled } from 'nativewind';
@@ -39,3 +38,13 @@ export function CardFooter({ children, className = '' }) {
     </StyledView>
   );
 }
+
+// Create a default export combining all components
+const CardComponents = {
+  Card,
+  CardHeader,
+  CardContent,
+  CardFooter
+};
+
+export default CardComponents;

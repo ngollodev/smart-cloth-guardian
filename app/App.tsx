@@ -5,14 +5,21 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StatusBar } from 'react-native';
 import { AuthProvider } from './hooks/useAuth';
 import { SystemProvider } from './hooks/useSystem';
-import LoginScreen from './screens/LogsScreen';
+import LoginScreen from './screens/LoginScreen';
 import RegisterScreen from './screens/RegisterScreen';
 import MainTabNavigator from './navigation/MainTabNavigator';
 
-// Create navigation stack
-const Stack = createNativeStackNavigator();
+// Define RootStackParamList to properly type the navigator
+export type RootStackParamList = {
+  Login: undefined;
+  Register: undefined;
+  MainApp: undefined;
+};
 
-export default function App() {
+// Create navigation stack with the correct typing
+const Stack = createNativeStackNavigator<RootStackParamList>();
+
+function App() {
   return (
     <NavigationContainer>
       <AuthProvider>
@@ -28,3 +35,5 @@ export default function App() {
     </NavigationContainer>
   );
 }
+
+export default App;

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, Image } from 'react-native';
-import { styled } from '../libs/styled';
+import { styled } from 'nativewind';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
-import { Button } from '../components/ui/Button';
-import { Input } from '../components/ui/Input';
+import { Button } from '../components/ui/button';
+import { Input } from '../components/ui/input';
 import { useAuth, LoginCredentials } from '../hooks/useAuth';
 
 const StyledView = styled(View);
@@ -13,7 +13,7 @@ const StyledText = styled(Text);
 const StyledTouchableOpacity = styled(TouchableOpacity);
 const StyledImage = styled(Image);
 
-export default function LoginScreen() {
+function LoginScreen() {
   const [formData, setFormData] = useState<LoginCredentials>({
     email: '',
     password: '',
@@ -129,3 +129,5 @@ export default function LoginScreen() {
     </StyledView>
   );
 }
+
+export default LoginScreen;

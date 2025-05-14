@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { View, Text, ScrollView, SafeAreaView } from 'react-native';
 import { styled } from 'nativewind';
@@ -14,7 +15,7 @@ const notifications = [
   { id: '3', title: 'Schedule activated', message: 'Morning extension schedule was activated', time: '2 days ago', read: true },
 ];
 
-export default function NotificationsScreen() {
+function NotificationsScreen() {
   return (
     <StyledSafeAreaView className="flex-1 bg-background">
       <StyledView className="p-4 border-b border-gray-200">
@@ -36,3 +37,5 @@ export default function NotificationsScreen() {
     </StyledSafeAreaView>
   );
 }
+
+export default NotificationsScreen;
